@@ -1,0 +1,618 @@
+@charset "utf-8";
+
+
+
+
+
+
+
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+    margin:0 auto;
+}
+
+
+
+
+
+.slider img {
+    width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height:auto;
+}
+
+.slider .slick-slide {
+  transform: scale(0.8);/*左右の画像のサイズを80%に*/
+  transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+  opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+  transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+  opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next{
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top:2px solid #fff;/*矢印の色*/
+    border-right:2px solid #fff;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+  margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+  margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+  background:#eee;
+}
+
+h2,p {
+    text-align:center;
+    padding:25px;  
+}
+
+
+
+
+
+
+
+
+.c1{padding:50px;
+
+
+
+}
+
+ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  color: #333;
+}
+
+a:hover,
+a:active{
+  text-decoration: none;
+}
+
+.header{
+	width:100%;
+	height:127px;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	transition: all 0.3s;
+}
+
+.header-smaller{
+	width:100%;
+	height:80px;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+
+
+.img10{  
+padding: 50px 0 0 230px;
+    display: flex;
+	justify-content: space-between;
+}
+
+
+
+
+
+
+.header__inner{
+	width:1000px;
+	height:127px;
+	margin:0 auto;
+	display: flex;
+	justify-content: space-between;
+	}
+
+.header__logo-img{
+	width:240px;
+	height:auto;
+	margin:30px 0 0 0;
+
+	}
+
+.gnav{
+	width:420px;
+	margin: 51px 0 0 0;
+	transition: 0.3s;
+	}
+
+
+	.gnav-smaller{
+		width:380px;
+		margin: 20px 0 0 0;
+
+		}
+		.gnav-smaller a{
+	font-size: 14px;
+			}
+	
+
+
+.gnav__menu{
+	display: flex;
+	justify-content: space-between;
+	}
+
+.gnav__link{
+	text-decoration: none;
+	color:#fff;
+	font-size:20px;
+	font-family: "小塚ゴシック Pro",sans-serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+	display:block;
+	height:26px;
+	line-height: 29px;
+	text-indent: 24px;
+}
+
+.gnav__link:hover{opacity: 0.5;}
+
+.gnav__link--btn1{
+
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.gnav__link--btn2{
+	
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.gnav__link--btn3{
+	background-image: url(../images/icon4.jpg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+    
+h1{
+font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+color:#fff;
+text-align: center;
+line-height: 100vh;
+font-size: 40px;
+font-weight: bold;
+text-shadow: 2px 2px 10px rgb(48, 23, 23);
+}
+
+
+
+h4{
+    text-align:center;
+ justify-content: center;
+    padding:20px 0 0 0px;
+    }
+
+
+
+
+h5{ padding:190px 0 0 290px;
+  
+        }
+    
+    
+
+
+
+
+.main{
+    display: flex;
+justify-content: space-between;
+margin-top: 20px;
+
+}
+
+
+
+
+.main1{
+    margin: 0 0 0 70px;
+}
+
+
+
+
+/*背景を固定するブロック*/
+.contents1{
+height: 105vh;
+background-image: url("../images/1123.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+
+.screen{
+	width:100%;
+	height:100vh;
+	background-color: #fff;
+	position:absolute;
+	top:0;
+}
+
+.minilogo{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+
+
+}
+
+.contents2{
+    height: 100vh;
+    background-image: url("../images/112.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+    
+
+
+
+	
+    .main-home{
+        display:flex;
+        justify-content: space-between;
+        width:1500px;
+        margin:0 auto 152px auto;
+
+        padding: 100px;
+        }
+    
+    .main-home__service-section{
+        width:450px;
+        text-align:center;
+    }
+    
+    .main-home__heading{
+        font-size:30px;
+        font-family:sans-serif;
+        font-weight:lighter;
+        letter-spacing:2px;
+        color:rgb(54, 41, 119);
+        margin:0 0 30px 0;
+    }
+
+    .main-home__txt{
+        text-align:left;
+        font-size:16px;
+        font-family:sans-serif;
+        font-weight:lighter;
+        line-height:190%;
+        color:#676767;
+        margin: 0 0 0 0;
+    }
+        
+
+
+   
+
+.contents3{
+height: 100vh;
+background-image: url("../images/003.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+
+.contents4{
+    height: 100vh;
+    background-image: url("../images/005.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+    
+
+.contents5{
+height: 100vh;
+background-image: url("../images/1123.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+
+
+
+
+
+
+
+/*背景を固定しないブロック*/
+.contents2{
+height: 100vh;
+background-image: url("../images/112.gif");
+background-repeat: no-repeat;
+background-size: cover;}
+
+
+
+
+.sen{
+	width:1011px;
+	margin:10px 0 0 335px;
+	box-shadow: 0 0 10px #aaa;
+	padding: 10px 15px 40px 10px;
+    justify-content:start;
+}
+
+.h6{
+	text-align: center;
+	font-size: 28px;
+	font-weight: bold;
+	color:#44AF3E;
+
+}
+.p{
+	line-height: 175%;
+}
+
+
+.contents4{
+height: 100vh;
+
+background-image: url("../images/004.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+footer{
+width:100%;
+height:100px;
+background-color: #000;
+line-height: 100px;
+font-size: 14px;
+text-align: center;
+color: #eee;
+}
+
+
+
+
+
+
+
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    color: #fff;
+  }
+  
+  a{
+    color: #fff;
+  }
+  
+  /*========= particle js を描画するエリア設定 ===============*/
+  
+  html,body{
+    height: 100%;/*高さを100%にして描画エリアをとる*/
+  }
+  
+  #particles-js{ 
+    position:fixed;/*描画固定*/
+    z-index:-1;/*描画を一番下に*/
+    width: 100%;
+    height: 100%;
+    background-color:#020E34;/*背景色*/
+  }
+  
+  #wrapper{
+    position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+    width:100%;
+    height: 100%;
+  }
+
+
+
+  #splash {
+    /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background:#eee;
+  text-align:center;
+  color:#fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo svg{
+    width:300px;
+}
+
+/*=============== SVGアニメーション内の指定 =================*/
+
+/*アニメーション前の指定*/
+#mask path {
+    fill-opacity: 0;/*最初は透過0で見えない状態*/
+    transition: fill-opacity .5s;/*カラーがつく際のアニメーション0.5秒で変化*/
+    fill: none;/*塗りがない状態*/
+    stroke: #333;/*線の色*/
+  }
+
+/*アニメーション後に.doneというクラス名がで付与された時の指定*/
+#mask.done path{
+    fill: #333;/*塗りの色*/
+    fill-opacity: 1;/*透過1で見える状態*/
+    stroke: none;/*線の色なし*/
+  }
+
+
+
+
+  
+
+/*header設定*/
+#header{
+    position: relative;/*ローディング画像などを表示す際の基点とするため指定*/
+      height: 100vh;/*高さを全画面にあわせる*/
+      text-align: center;
+      color: #fff;
+      /*ローディング画面時＆動画が表示されないときに表示する背景画像のレスポンシブ化*/
+      background: url("../img/movie.jpg") no-repeat;
+      background-size: cover;
+  }
+  
+  /* ローディングアイコン設定 */
+  
+  #loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+      font-weight: bold;
+  }
+  
+  /*jQueryで付与されたdisappearクラスがついたらロゴエリアを非表示*/
+  
+  #loading.disappear{
+       display: none;   
+  }
+  
+  
+  /* youtube設定 */
+  
+  #youtube-area{
+      position: fixed;
+      z-index: 1;/*最背面に設定*/
+      top: 0;
+      right:0;
+      left:0;
+      bottom:0;
+      overflow: hidden;
+    opacity: 0;    
+  }
+  
+  /*jQueryで付与されたappearクラスがついたらYoutubeエリアをふわっと表示*/
+  #youtube-area.appear {
+    animation-name:PageAnimeAppear;
+    animation-duration:.5s;
+    animation-fill-mode:forwards;
+  }
+  
+  @keyframes PageAnimeAppear{
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+  }
+  }
+  
+  #youtube {
+  /*天地中央配置*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  /*縦横幅指定*/
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+  }
+  
+  /*youtubeがクリックされないためのマスク*/
+  #youtube-mask{
+      position: absolute;
+      z-index: 2;/*下から2番目に表示*/
+      top:0;
+      width:100%;
+      height: 100%;
+  }
+  
+  
+ 
+  
+  /*下のコンテンツ*/
+  #container{
+      position: relative;/*relativeを指定してfixed指定をした#youtube-areaの上に表示*/
+      z-index: 3;/*一番上に表示*/
+      /*見た目の調整*/
+    background:#333;
+    color: #fff;
+    padding:300px 0;
+    text-align: center;
+  }
